@@ -106,7 +106,9 @@ def service_instance_provision(X_Broker_API_Version, instance_id, body, X_Broker
     :rtype: ServiceInstanceProvisionResponse
     """
     if connexion.request.is_json:
+        print("Doing the service instance")
         body = ServiceInstanceProvisionRequest.from_dict(connexion.request.get_json())  # noqa: E501
+        print(body)
     return 'do some magic!'
 
 
